@@ -17,7 +17,6 @@ use Cocorico\CoreBundle\Event\ListingFormBuilderEvent;
 use Cocorico\CoreBundle\Event\ListingFormEvents;
 use Cocorico\CoreBundle\Form\Type\ImageType;
 use Cocorico\UserBundle\Entity\User;
-use Doctrine\DBAL\Types\TextType;
 use JMS\TranslationBundle\Model\Message;
 use JMS\TranslationBundle\Translation\TranslationContainerInterface;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
@@ -187,16 +186,6 @@ class ListingNewType extends AbstractType implements TranslationContainerInterfa
                     ),
                 )
             );
-
-        $builder
-            ->add(
-                'isbn',
-                'text',
-                [
-                    'label' =>'ISBN'
-                ]
-            );
-
         //Dispatch LISTING_NEW_FORM_BUILD Event. Listener listening this event can add fields and validation
         //Used for example to add fields to new listing form
         $this->dispatcher->dispatch(

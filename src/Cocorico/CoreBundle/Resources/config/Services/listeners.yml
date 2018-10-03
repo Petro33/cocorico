@@ -37,3 +37,8 @@ services:
             - "@event_dispatcher"
         tags:
             - { name: doctrine.event_subscriber }
+
+    cocorico.add_isbn_field_listener:
+        class: Cocorico\CoreBundle\Listener\AddISBNFieldListener
+        tags:
+        - { name: kernel.event_subscriber}
