@@ -27,17 +27,20 @@ class LoadListingCategoryData extends AbstractFixture implements OrderedFixtureI
         $category = new ListingCategory();
         $category->translate('en')->setName('Category1');
         $category->translate('fr')->setName('Categorie1');
+        $category->translate('de')->setName('Categorie1_de');
         $category->translate('nl')->setName('Categorie1_nl');
 
         $subCategory1 = new ListingCategory();
         $subCategory1->translate('en')->setName('Category1_1');
         $subCategory1->translate('fr')->setName('Categorie1_1');
+        $subCategory1->translate('de')->setName('Categorie1_1_de');
         $subCategory1->translate('nl')->setName('Categorie1_1_nl');
         $subCategory1->setParent($category);
 
         $subCategory2 = new ListingCategory();
         $subCategory2->translate('en')->setName('Category1_2');
         $subCategory2->translate('fr')->setName('Categorie1_2');
+        $subCategory2->translate('de')->setName('Categorie1_2_de');
         $subCategory2->translate('nl')->setName('Categorie1_2_nl');
         $subCategory2->setParent($category);
 
@@ -54,23 +57,27 @@ class LoadListingCategoryData extends AbstractFixture implements OrderedFixtureI
         $category = new ListingCategory();
         $category->translate('en')->setName('Category2');
         $category->translate('fr')->setName('Categorie2');
+        $category->translate('de')->setName('Categorie2_de');
         $category->translate('nl')->setName('Categorie2_nl');
 
         $subCategory1 = new ListingCategory();
         $subCategory1->translate('en')->setName('Category2_1');
         $subCategory1->translate('fr')->setName('Categorie2_1');
+        $subCategory1->translate('de')->setName('Categorie2_1_de');
         $subCategory1->translate('nl')->setName('Categorie2_1_nl');
         $subCategory1->setParent($category);
 
         $subSubCategory1 = new ListingCategory();
         $subSubCategory1->translate('en')->setName('Category2_1_1');
         $subSubCategory1->translate('fr')->setName('Categorie2_1_1');
+        $subSubCategory1->translate('de')->setName('Categorie2_1_1_de');
         $subSubCategory1->translate('nl')->setName('Categorie2_1_1_nl');
         $subSubCategory1->setParent($subCategory1);
 
         $subCategory2 = new ListingCategory();
         $subCategory2->translate('en')->setName('Category2_2');
         $subCategory2->translate('fr')->setName('Categorie2_2');
+        $subCategory2->translate('de')->setName('Categorie2_2_de');
         $subCategory2->translate('nl')->setName('Categorie2_2_nl');
         $subCategory2->setParent($category);
 
