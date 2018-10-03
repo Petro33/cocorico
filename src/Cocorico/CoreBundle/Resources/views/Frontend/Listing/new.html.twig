@@ -226,7 +226,23 @@
                                                     }) }}
                                                 </div>
                                             </div>
+
+
                                         </div>
+                                        <div class="col street">
+                                            {{ form_errors(form.isbn) }}
+                                            <span class="label">{{ form_label(form.isbn) }}</span>
+
+                                            <div class="field-holder">
+                                                {{ form_widget(form.isbn, {
+                                                    'attr': {
+                                                        'class': "form-control"
+                                                    }
+                                                }) }}
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <br>
 
                                         <p>
                                             <a class="validate-location" href="javascript:void(0)">

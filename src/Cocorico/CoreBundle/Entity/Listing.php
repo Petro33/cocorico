@@ -116,6 +116,15 @@ class Listing extends BaseListing
      */
     private $options;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="isbn", type="string", length=255)
+     *
+     * @Assert\NotBlank()
+     */
+    private $isbn;
+
 
     public function __construct()
     {
@@ -579,6 +588,25 @@ class Listing extends BaseListing
     {
         return (string)$this->translate()->getSlug();
     }
+
+    /**
+     * @return string
+     */
+    public function getIsbn()
+    {
+        return $this->isbn;
+    }
+
+    /**
+     * @param string $isbn
+     */
+    public function setIsbn(string $isbn)
+    {
+        $this->isbn = $isbn;
+    }
+
+
+
 
     public function __toString()
     {
